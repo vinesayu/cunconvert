@@ -25,7 +25,7 @@ const orgLd = canonical
   ? JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      name: 'CunConvert',
+      name: 'vinesayuConvert',
       url: canonical,
       logo: ogImageUrl,
       description: '本地文件工具箱：图片与 SVG 转换、压缩、裁剪、矢量化，以及 PDF、二维码、Favicon 与 Markdown 编辑。所有文件在浏览器本地处理，不会上传服务器。',
@@ -59,7 +59,7 @@ const allLd = orgLd ? [...jsonLd, orgLd] : jsonLd;
     <script is:inline>
       (function () {
         try {
-          var saved = localStorage.getItem('cunconvert-theme');
+          var saved = localStorage.getItem('vinesayuconvert-theme');
           var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
           document.documentElement.dataset.theme = dark ? 'dark' : 'light';
         } catch (e) {
